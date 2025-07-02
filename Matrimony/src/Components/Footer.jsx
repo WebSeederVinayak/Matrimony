@@ -45,10 +45,11 @@ export default function MatrimonyFooter() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-5 text-lg">Policies</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Terms of Services</a></li>
+              <li><a href="https://www.appwin.in/policy.html" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Privacy Policy</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Terms Of Services</a></li>
               <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Cookie Policy</a></li>
               <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Refund Policy</a></li>
+              <li><a href="https://www.appwin.in/child-safety-policy.html" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Child Safety Policy</a></li>
               
             </ul>
           </div>
