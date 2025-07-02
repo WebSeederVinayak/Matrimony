@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* In your main CSS file (e.g., src/index.css or src/globals.css) */
+
+/* Add this to the end of your file, after any Tailwind imports */
+
+.cursor-follower {
+  position: absolute; /* Allows precise positioning */
+  font-size: 24px;    /* Size of your heart emoji */
+  pointer-events: none; /* VERY IMPORTANT: Allows clicks to pass through this element */
+  z-index: 9999;      /* Ensure it's on top of everything */
+  transform: translate(-50%, -50%); /* Centers the heart emoji on its own coordinates */
+  transition: transform 0.05s ease-out; /* Optional: Smooths the following motion slightly */
+  /* Remove any opacity or scale animations if you want it to be always visible and same size */
+}
