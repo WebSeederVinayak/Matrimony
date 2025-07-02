@@ -51,15 +51,17 @@ export default function MembershipSection() {
     <section className="py-16 bg-gradient-to-br from-amber-50 via-white to-red-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Choose Your Perfect Plan
+        <div className="text-center mb-24 relative">
+          <h2 className="text-5xl lg:text-6xl font-extrabold mb-6 leading-snug drop-shadow-md animate-fade-in-up-stagger-1">
+            <span className="text-black">
+              Choose your <span className='bg-gradient-to-r from-red-500 via-yellow-400 to-amber-500 bg-clip-text text-transparent' > Perfect Plan </span>
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Start your journey to find your life partner with our comprehensive membership options designed for every need
+          <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-stagger-2">
+            Start your journey to find your life partner with our carefully curated membership options crafted for every heart and every need.
           </p>
         </div>
-
+        
         {/* Steps Process */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-10">

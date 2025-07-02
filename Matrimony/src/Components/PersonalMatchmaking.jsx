@@ -5,7 +5,7 @@ export default function PersonalMatchmaking() {
     text: "The personal touch made all the difference. My matchmaker understood exactly what I was looking for and introduced me to my husband within 3 months. The service was discreet, professional, and truly personalized.",
     name: "Priya & Rajesh",
     location: "Mumbai",
-    image: "/testimonial-couple.jpg" // Ensure this image path is correct
+    image: "/images/couple1.jpg" // Ensure this image path is correct
   };
 
   const serviceHighlights = [
@@ -79,7 +79,7 @@ export default function PersonalMatchmaking() {
             </span>
           </h2>
           
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto font-light leading-relaxed"> {/* Slightly reduced font size */}
+          <p className="text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed"> {/* Slightly reduced font size */}
             Our bespoke matchmaking service is crafted for discerning individuals seeking meaningful connections through personalized, confidential consultations.
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function PersonalMatchmaking() {
             <div className="space-y-6"> {/* Reduced space-y */}
               {experiencePoints.map((point, index) => (
                 <div key={index} className="flex items-start space-x-4 group transform hover:scale-105 transition-transform duration-300"> {/* Added scale on hover */}
-                  <div className="bg-amber-400 bg-opacity-20 rounded-full p-3 mt-1 flex-shrink-0">
+                  <div className="bg-amber-400 bg-opacity-20 rounded-full p-1 mt-1 flex-shrink-0">
                     {point.icon}
                   </div>
                   <div>

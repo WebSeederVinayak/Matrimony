@@ -28,11 +28,13 @@ export default function TestimonialSection() {
     <section className="py-20 bg-gradient-to-br from-amber-50 via-white to-red-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Hear From Our Happy Couples
+        <div className="text-center mb-24 relative">
+          <h2 className="text-5xl lg:text-6xl font-extrabold mb-6 leading-snug drop-shadow-md animate-fade-in-up-stagger-1">
+            <span className="text-black">
+              Hear From Our <span className='bg-gradient-to-r from-red-500 via-yellow-400 to-amber-500 bg-clip-text text-transparent' > Happy Couples </span>
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-stagger-2">
             Real stories from individuals who found their perfect match and built lasting relationships through our platform.
           </p>
         </div>
