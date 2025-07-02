@@ -1,14 +1,41 @@
 import { Search, ChevronDown } from 'lucide-react';
+import { useState, useEffect } from 'react'; // Import useState and useEffect
 
 export default function MatrimonyHeader() {
+  const [isVisible, setIsVisible] = useState(true); // State to control header visibility
+  const [lastScrollY, setLastScrollY] = useState(0); // State to store the last scroll position
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if current scroll position is greater than last scroll position
+      // and if it's past a certain threshold (e.g., 100px) to prevent immediate hiding
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        setIsVisible(false); // Scrolling down, hide header
+      } else {
+        setIsVisible(true); // Scrolling up, show header
+      }
+      setLastScrollY(window.scrollY); // Update last scroll position
+    };
+
+    window.addEventListener('scroll', handleScroll); // Add scroll event listener
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Clean up the event listener
+    };
+  }, [lastScrollY]); // Re-run effect only if lastScrollY changes
+
   return (
-    <header className="bg-white border-b border-gray-200 px-4 py-1 shadow-md">
+    <header
+      className={`fixed top-0 left-0 w-full bg-white border-b border-gray-200 px-4 py-1 shadow-md z-50 transition-transform duration-300 ease-in-out ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <div className="px-10 max-w-[100%] mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <img 
-            src="/images/Logo1.jpeg" 
-            alt="Matrimony.com" 
+          <img
+            src="/images/Logo1.jpeg"
+            alt="Matrimony.com"
             className="h-20 w-20 object-contain transform transition-transform duration-300 ease-in-out hover:scale-105"
           />
         </div>
@@ -18,8 +45,8 @@ export default function MatrimonyHeader() {
           {/* Home */}
           {['Home', 'About Us', 'Clients', 'Contact Us'].map((item) => (
             <div key={item} className="relative group">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="block text-gray-700 hover:text-red-500 text-xl font-sans transition-colors duration-200 ease-in-out transform group-hover:scale-105"
               >
                 {item}
@@ -30,8 +57,8 @@ export default function MatrimonyHeader() {
         </nav>
 
         {/* Auth Buttons */}
-        <div className="flex items-center space-x-4"> {/* Added space between buttons */}
-          
+        <div className="flex items-center space-x-4">
+          {/* You can add your Auth buttons here */}
         </div>
 
         {/* Mobile Menu Button - visible on smaller screens */}
