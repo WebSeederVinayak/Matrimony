@@ -8,11 +8,17 @@ const MatrimonyHero = () => {
     setIsVisible(true);
   }, []);
 
+  // Note: For the SVG background pattern, Tailwind classes cannot be used directly.
+  // We'll use a slightly different approach or a hardcoded hex if a very specific color is needed,
+  // but I'll try to approximate with a standard Tailwind color's hex.
+  // Closest to 'matrimony-golden' #D4A349 is perhaps amber-600 or yellow-600. Let's use yellow-600 for its hex.
+  const patternColorHex = '#d97706'; // Approximate hex for amber-600
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-rose-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-amber-50 relative overflow-hidden">
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23dc2626' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23${patternColorHex.slice(1)}' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
         backgroundSize: '40px 40px'
       }}></div>
 
@@ -22,17 +28,12 @@ const MatrimonyHero = () => {
           {/* Left Content */}
           <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             
-            {/* Premium Badge */}
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-100 to-rose-100 border border-red-200 text-red-700 px-5 py-2 rounded-full text-sm font-semibold shadow-md">
-              <Award className="w-4 h-4" />
-              <span>India's Premier Matrimony Platform</span>
-            </div>
 
             {/* Main Heading */}
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
                 Where Love
-                <span className="block bg-gradient-to-r from-red-600 to-rose-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">
                   Finds Its Way
                 </span>
               </h1>
@@ -44,20 +45,20 @@ const MatrimonyHero = () => {
             {/* Key Features */}
             <div className="grid grid-cols-3 gap-6">
               <div className="group text-center p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
-                  <Shield className="w-6 h-6 text-red-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+                  <Shield className="w-6 h-6 text-amber-600 group-hover:text-white" />
                 </div>
                 <div className="text-sm font-semibold text-gray-800">Verified Profiles</div>
               </div>
               <div className="group text-center p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
-                  <Users className="w-6 h-6 text-red-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+                  <Users className="w-6 h-6 text-amber-600 group-hover:text-white" />
                 </div>
                 <div className="text-sm font-semibold text-gray-800">Smart Matching</div>
               </div>
               <div className="group text-center p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
-                  <Heart className="w-6 h-6 text-red-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+                  <Heart className="w-6 h-6 text-amber-600 group-hover:text-white" />
                 </div>
                 <div className="text-sm font-semibold text-gray-800">Success Stories</div>
               </div>
@@ -65,7 +66,7 @@ const MatrimonyHero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="group bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2">
+              <button className="group bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2">
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -85,7 +86,7 @@ const MatrimonyHero = () => {
                 <div className="text-sm text-gray-600">Happy Couples</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-red-600">98%</div>
+                <div className="text-2xl font-bold text-red-600">99%</div>
                 <div className="text-sm text-gray-600">Success Rate</div>
               </div>
             </div>
@@ -99,21 +100,14 @@ const MatrimonyHero = () => {
               
               {/* Primary Image - Elegant Couple */}
               <div className="relative z-10 bg-white p-6 rounded-3xl shadow-2xl">
-                <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-red-100 to-rose-100 relative">
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-amber-100 to-yellow-100 relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    src="/images/heromain.jpg"
                     alt="Happy couple"
                     className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                   
-                  {/* Floating Badge */}
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full shadow-lg">
-                    <div className="flex items-center space-x-1">
-                      <Sparkles className="w-4 h-4 text-yellow-500" />
-                      <span className="text-sm font-semibold text-gray-800">Perfect Match</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -121,7 +115,7 @@ const MatrimonyHero = () => {
               <div className="absolute -bottom-8 -left-8 z-20 bg-white p-4 rounded-2xl shadow-xl transform rotate-6 hover:rotate-3 transition-transform duration-300">
                 <div className="w-32 h-32 rounded-xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+                    src="/images/rings.jpg"
                     alt="Wedding rings"
                     className="w-full h-full object-cover"
                   />
@@ -132,7 +126,7 @@ const MatrimonyHero = () => {
               <div className="absolute -top-6 -right-6 z-20 bg-white p-3 rounded-xl shadow-lg transform -rotate-6 hover:-rotate-3 transition-transform duration-300">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+                    src="/images/wedding.jpg"
                     alt="Indian wedding"
                     className="w-full h-full object-cover"
                   />
@@ -140,8 +134,8 @@ const MatrimonyHero = () => {
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute top-16 -left-16 w-24 h-24 bg-gradient-to-r from-red-200 to-rose-200 rounded-full opacity-60 animate-pulse"></div>
-              <div className="absolute -bottom-16 right-16 w-20 h-20 bg-gradient-to-r from-rose-200 to-red-200 rounded-full opacity-40 animate-pulse delay-1000"></div>
+              <div className="absolute top-16 -left-16 w-24 h-24 bg-gradient-to-r from-amber-200 to-yellow-200 rounded-full opacity-60 animate-pulse"></div>
+              <div className="absolute -bottom-16 right-16 w-20 h-20 bg-gradient-to-r from-yellow-200 to-amber-200 rounded-full opacity-40 animate-pulse delay-1000"></div>
               
               {/* Success Notification */}
               <div className="absolute bottom-12 left-12 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg animate-bounce">
@@ -153,7 +147,7 @@ const MatrimonyHero = () => {
             </div>
 
             {/* Testimonial Card */}
-            <div className="mt-12 bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-red-100">
+            <div className="mt-12 bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-amber-100">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                   <img 
