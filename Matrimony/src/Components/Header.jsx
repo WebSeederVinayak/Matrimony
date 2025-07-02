@@ -2,14 +2,14 @@ import { Search, ChevronDown } from 'lucide-react';
 
 export default function MatrimonyHeader() {
   return (
-    <header className="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
+    <header className="bg-white border-b border-gray-200 px-4 py-1 shadow-md">
       <div className="px-10 max-w-[100%] mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
           <img 
-            src="/images/Logo.jpg" 
+            src="/images/Logo1.jpeg" 
             alt="Matrimony.com" 
-            className="h-16 w-48"
+            className="h-20 w-20 object-contain transform transition-transform duration-300 ease-in-out hover:scale-105"
           />
         </div>
 
@@ -20,7 +20,7 @@ export default function MatrimonyHeader() {
             <div key={item} className="relative group">
               <a 
                 href="#" 
-                className="block text-gray-700 hover:text-red-500 text-lg font-sans transition-colors duration-200 ease-in-out transform group-hover:scale-105"
+                className="block text-gray-700 hover:text-red-500 text-xl font-sans transition-colors duration-200 ease-in-out transform group-hover:scale-105"
               >
                 {item}
               </a>
@@ -31,19 +31,7 @@ export default function MatrimonyHeader() {
 
         {/* Auth Buttons */}
         <div className="flex items-center space-x-4"> {/* Added space between buttons */}
-          {/* Sign Up Button */}
-          <button 
-            className="px-6 py-2 bg-transparent border border-red-500 text-red-500 rounded-full font-semibold hover:bg-red-50 hover:text-red-600 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-          >
-            Sign Up
-          </button>
-
-          {/* Login Button */}
-          <button 
-            className="px-6 py-2 bg-red-500 text-white rounded-full font-semibold hover:bg-red-600 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-          >
-            Login
-          </button>
+          
         </div>
 
         {/* Mobile Menu Button - visible on smaller screens */}

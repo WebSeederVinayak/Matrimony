@@ -9,30 +9,14 @@ export default function MatrimonyFooter() {
           {/* Company Info */}
           <div className="space-y-6 lg:col-span-2">
             <img 
-              src="/footer-logo.png" 
+              src="/images/Logo1.jpeg" 
               alt="Matrimony.com" 
-              className="h-9 w-auto"
+              className="h-16 w-16"
             />
             <p className="text-gray-600 text-base leading-relaxed max-w-sm">
               India's most trusted matrimony service, connecting millions of hearts worldwide. Join us to find your perfect match.
             </p>
-            <div className="flex space-x-5">
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors duration-300">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors duration-300">
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors duration-300">
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors duration-300">
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors duration-300">
-                <Youtube className="h-6 w-6" />
-              </a>
-            </div>
+           
           </div>
 
           {/* Quick Links */}
@@ -59,13 +43,13 @@ export default function MatrimonyFooter() {
 
           {/* Support & Company Combined */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-5 text-lg">Support & Company</h3>
+            <h3 className="font-semibold text-gray-900 mb-5 text-lg">Policies</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Help Center</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Safety Tips</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Careers</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Press</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Testimonials</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Privacy Policy</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Terms of Services</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Cookie Policy</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200">Refund Policy</a></li>
+              
             </ul>
           </div>
         </div>
@@ -77,12 +61,9 @@ export default function MatrimonyFooter() {
             <span className="text-gray-700 font-medium text-lg">Download Our App</span>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-red-500 hover:bg-red-600 transition-colors duration-300">
-              <img src="/app-store-badge.png" alt="App Store" className="h-5 mr-2" />
-              App Store
-            </a>
+            
             <a href="#" className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-300">
-              <img src="/google-play-badge.png" alt="Google Play" className="h-5 mr-2" />
+              <img src="/images/gplay.png" alt="Google Play" className="h-5 mr-2" />
               Google Play
             </a>
           </div>
@@ -93,12 +74,7 @@ export default function MatrimonyFooter() {
           <p className="text-sm text-gray-500">
             © 2025 Matrimony.com. All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center md:justify-end items-center space-x-6 text-sm text-gray-600">
-            <a href="#" className="hover:text-red-600 transition-colors duration-200">Privacy Policy</a>
-            <a href="#" className="hover:text-red-600 transition-colors duration-200">Terms of Service</a>
-            <a href="#" className="hover:text-red-600 transition-colors duration-200">Cookie Policy</a>
-            <a href="#" className="hover:text-red-600 transition-colors duration-200">Refund Policy</a>
-          </div>
+          
         </div>
       </div>
     </footer>

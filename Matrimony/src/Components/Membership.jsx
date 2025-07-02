@@ -1,4 +1,4 @@
-import { Check, Star, Crown, Heart, Users, MessageCircle, Shield, Zap } from 'lucide-react';
+import { Check, Star, Crown, Heart, Users, MessageCircle, Shield, Zap, X } from 'lucide-react'; // Import X icon
 
 export default function MembershipSection() {
   const steps = [
@@ -9,7 +9,7 @@ export default function MembershipSection() {
       icon: <Users className="h-6 w-6" />
     },
     {
-      number: "02", 
+      number: "02",
       title: "Browse & Connect",
       description: "Search through verified profiles and send interests to potential matches",
       icon: <Heart className="h-6 w-6" />
@@ -28,33 +28,30 @@ export default function MembershipSection() {
     }
   ];
 
-  const freeFeatures = [
-    "Create detailed profile",
-    "Upload up to 5 photos",
-    "Basic search filters",
-    "Send interests",
-    "View contact details of interested members",
-    "Mobile app access"
-  ];
-
-  const premiumFeatures = [
-    "All free features included",
-    "Unlimited photo uploads",
-    "Advanced search & filters",
-    "Send unlimited messages",
-    "View all member photos",
-    "Profile highlighting",
-    "Read message receipts",
-    "Contact number visibility",
-    "Priority customer support",
-    "Ad-free experience"
+  // Define a comprehensive list of all features
+  const allFeatures = [
+    { name: "Create detailed profile", free: true },
+    { name: "Upload photos (up to 5)", free: true },
+    { name: "Basic search filters", free: true },
+    { name: "Send interests", free: true },
+    { name: "View contact details of interested members", free: true },
+    { name: "Mobile app access", free: true },
+    { name: "Unlimited photo uploads", free: false }, // Premium only
+    { name: "Advanced search & filters", free: false }, // Premium only
+    { name: "Send unlimited messages", free: false }, // Premium only
+    { name: "View all member photos", free: false }, // Premium only
+    { name: "Profile highlighting", free: false }, // Premium only
+    { name: "Read message receipts", free: false }, // Premium only
+    { name: "Contact number visibility", free: false }, // Premium only
+    { name: "Priority customer support", free: false }, // Premium only
+    { name: "Ad-free experience", free: false } // Premium only
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-amber-50 via-white to-red-50"> {/* Reduced vertical padding */}
+    <section className="py-16 bg-gradient-to-br from-amber-50 via-white to-red-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-10"> {/* Reduced margin-bottom */}
+        <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Choose Your Perfect Plan
           </h2>
@@ -64,11 +61,11 @@ export default function MembershipSection() {
         </div>
 
         {/* Steps Process */}
-        <div className="mb-16"> {/* Reduced margin-bottom */}
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-10"> {/* Reduced margin-bottom */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-center text-gray-900 mb-10">
             How It Works
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> {/* Reduced gap */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, index) => (
               <div key={index} className="relative group">
                 <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 transform group-hover:-translate-y-2">
@@ -91,7 +88,7 @@ export default function MembershipSection() {
         </div>
 
         {/* Membership Plans */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto"> {/* Reduced gap */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {/* Free Membership */}
           <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
             <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-8 text-center">
@@ -102,17 +99,21 @@ export default function MembershipSection() {
               <div className="text-4xl font-bold text-gray-900 mb-2">₹0</div>
               <p className="text-gray-600">Perfect to get started</p>
             </div>
-            
+
             <div className="p-8">
               <ul className="space-y-4 mb-8">
-                {freeFeatures.map((feature, index) => (
+                {allFeatures.map((feature, index) => (
                   <li key={index} className="flex items-start">
-                    <Check className="h-5 w-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
+                    {feature.free ? (
+                      <Check className="h-5 w-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                    ) : (
+                      <X className="h-5 w-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" /> // Gray X for non-free features
+                    )}
+                    <span className={feature.free ? "text-gray-700" : "text-gray-500 line-through"}>{feature.name}</span> {/* Line-through for non-free */}
                   </li>
                 ))}
               </ul>
-              
+
               <button className="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-300 transform hover:scale-[1.02]">
                 Get Started Free
               </button>
@@ -125,32 +126,31 @@ export default function MembershipSection() {
             <div className="absolute top-0 right-0 bg-red-600 text-white px-4 py-2 text-sm font-semibold rounded-bl-lg">
               Most Popular
             </div>
-            
+
             <div className="bg-gradient-to-r from-red-600 to-amber-600 p-8 text-center text-white">
               <div className="bg-white text-amber-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Crown className="h-8 w-8" />
               </div>
               <h3 className="text-2xl font-bold mb-2">Premium Membership</h3>
               <div className="flex items-center justify-center mb-2">
-                <span className="text-2xl line-through opacity-75 mr-2">₹4,999</span>
+                {/* No line-through or discount display here, just the final price */}
                 <span className="text-4xl font-bold">₹2,999</span>
               </div>
               <p className="opacity-90">Best value for serious seekers</p>
-              <div className="bg-yellow-300 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold mt-2 inline-block">
-                40% OFF
-              </div>
+              {/* Removed 40% OFF badge */}
             </div>
-            
+
             <div className="p-8">
               <ul className="space-y-4 mb-8">
-                {premiumFeatures.map((feature, index) => (
+                {allFeatures.map((feature, index) => (
                   <li key={index} className="flex items-start">
+                    {/* All premium features get a checkmark */}
                     <Check className="h-5 w-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-700">{feature.name}</span>
                   </li>
                 ))}
               </ul>
-              
+
               <button className="w-full bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center transform hover:scale-[1.02]">
                 <Zap className="h-5 w-5 mr-2" />
                 Upgrade to Premium

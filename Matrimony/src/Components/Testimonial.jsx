@@ -21,24 +21,7 @@ export default function TestimonialSection() {
       location: "Mumbai",
       image: "https://placehold.co/80x80/FFDDC1/E67E22?text=PS" // Placeholder for Priya
     },
-    {
-      quote: "After trying several other platforms, this one stood out with its commitment to quality matches. My family and I are incredibly grateful for helping me find such a wonderful partner.",
-      name: "Vikram Reddy",
-      location: "Hyderabad",
-      image: "https://placehold.co/80x80/FFDDC1/E67E22?text=VR" // Placeholder for Vikram
-    },
-    {
-      quote: "Our journey started here, and it led us to a beautiful marriage. The profiles were genuine, and the matching algorithm truly understood our preferences. Thank you for bringing us together!",
-      name: "Shruti Desai",
-      location: "Ahmedabad",
-      image: "https://placehold.co/80x80/FFDDC1/E67E22?text=SD" // Placeholder for Shruti
-    },
-    {
-      quote: "From the first conversation to our wedding day, every step was guided by the excellent features of this platform. It's more than just a matrimonial site; it's a community that fosters true love.",
-      name: "Arjun Kapoor",
-      location: "Pune",
-      image: "https://placehold.co/80x80/FFDDC1/E67E22?text=AK" // Placeholder for Arjun
-    }
+    
   ];
 
   return (

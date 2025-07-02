@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, ArrowRight, Shield, Users } from 'lucide-react';
+import { Heart, ArrowRight, BadgeCheck, Users } from 'lucide-react'; // Changed Shield to BadgeCheck
 
 const MatrimonyHero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,7 +50,7 @@ const MatrimonyHero = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6"> {/* Changed to sm:grid-cols-3 for better small screen layout */}
               <div className="group text-center p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
-                  <Shield className="w-6 h-6 text-amber-600 group-hover:text-white" />
+                  <BadgeCheck className="w-6 h-6 text-amber-600 group-hover:text-white" /> {/* Changed Shield to BadgeCheck */}
                 </div>
                 <div className="text-sm font-semibold text-gray-800">Verified Profiles</div>
               </div>
@@ -70,30 +70,19 @@ const MatrimonyHero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="group bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105">
+              {/* Removed hover:scale-105 to prevent "bugging" effect */}
+              <button className="group bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-4 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 w-full sm:w-[16.25rem]">
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+              {/* Removed hover:scale-105 to prevent "bugging" effect */}
+              <button className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4  rounded-xl font-semibold text-lg transition-all duration-300 w-full sm:w-[16.25rem]">
                 Browse Profiles
               </button>
             </div>
 
             {/* Statistics */}
-            <div className="flex flex-wrap justify-center sm:justify-start items-center space-x-0 sm:space-x-8 pt-6 border-t border-gray-200 gap-y-4"> {/* Added flex-wrap and gap-y for responsiveness */}
-              <div className="w-1/2 sm:w-auto text-center sm:text-left">
-                <div className="text-3xl font-bold text-red-600">2M+</div>
-                <div className="text-sm text-gray-600">Registered Users</div>
-              </div>
-              <div className="w-1/2 sm:w-auto text-center sm:text-left">
-                <div className="text-3xl font-bold text-red-600">50K+</div>
-                <div className="text-sm text-gray-600">Happy Couples</div>
-              </div>
-              <div className="w-full sm:w-auto text-center sm:text-left">
-                <div className="text-3xl font-bold text-red-600">99%</div>
-                <div className="text-sm text-gray-600">Success Rate</div>
-              </div>
-            </div>
+            
           </div>
 
           {/* Right Visual Section */}
@@ -109,6 +98,7 @@ const MatrimonyHero = () => {
                     src="/images/heromain.jpg"
                     alt="Happy couple"
                     className="w-full h-full object-cover rounded-2xl transition-transform duration-700 ease-in-out hover:scale-105"
+                    onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/600x750/D4A349/ffffff?text=Happy+Couple"; }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                   
@@ -122,6 +112,7 @@ const MatrimonyHero = () => {
                     src="/images/rings.jpg"
                     alt="Wedding rings"
                     className="w-full h-full object-cover"
+                    onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/128x128/D4A349/ffffff?text=Rings"; }}
                   />
                 </div>
               </div>
@@ -133,6 +124,7 @@ const MatrimonyHero = () => {
                     src="/images/wedding.jpg"
                     alt="Indian wedding"
                     className="w-full h-full object-cover"
+                    onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/96x96/D4A349/ffffff?text=Wedding"; }}
                   />
                 </div>
               </div>
@@ -154,7 +146,7 @@ const MatrimonyHero = () => {
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                   <img 
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                    src="/images/woman.jpg"
                     alt="Happy customer"
                     className="w-full h-full object-cover"
                   />
