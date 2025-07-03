@@ -39,9 +39,13 @@ const ProfilesSection = ({ isVisible }) => {
       <div className="absolute bottom-10 right-0 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob-2"></div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        <h2 className={`text-5xl font-extrabold text-gray-900 mb-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'}`}>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-amber-500">Exclusive Profiles</span> Await
-        </h2>
+        <h2 className="text-5xl lg:text-6xl font-light mb-4 tracking-tight">
+            <span className="font-thin">Exclusive </span>
+         
+            <span className="font-bold bg-gradient-to-r from-amber-400 to-red-500 bg-clip-text text-transparent">
+              Profiles Await!
+            </span>
+          </h2>
         <p className={`text-xl text-gray-700 mb-16 max-w-4xl mx-auto transition-all duration-1000 ease-out delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'}`}>
           Dive into a carefully curated selection of potential partners. Unlock detailed insights and direct communication options with our premium membership.
         </p>
