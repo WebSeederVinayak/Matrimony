@@ -13,7 +13,7 @@ const AboutUsPage = () => {
   }, []);
 
   return (
-    <div className="font-inter text-gray-800 bg-gray-50 min-h-screen">
+    <div className="font-inter text-gray-800 bg-gray-50 min-h-screen mt-10">
       
 
       <main className="relative overflow-hidden py-16 lg:py-24">
@@ -26,7 +26,7 @@ const AboutUsPage = () => {
 
         {/* Hero Section: Our Story */}
         <section className="relative z-10 text-center px-6 mb-20 lg:mb-32">
-          <h1 className={`text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight drop-shadow-lg ${isVisible ? 'animate-fade-in-up-stagger-1' : 'opacity-0'}`}>
+          <h1 className={`text-5xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight drop-shadow-lg ${isVisible ? 'animate-fade-in-up-stagger-1' : 'opacity-0'}`}>
             Our Mission: <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-amber-600">Connecting Hearts</span>
           </h1>
           <p className={`text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed ${isVisible ? 'animate-fade-in-up-stagger-2' : 'opacity-0'}`}>
@@ -132,25 +132,8 @@ const AboutUsPage = () => {
 
         {/* Testimonials Section */}
         <TestimonialSection /> {/* Your Testimonials Component */}
-
-        {/* --- */}
-
-        {/* Call to Action Section */}
-        <section className="relative z-10 text-center px-6 py-20 bg-gradient-to-r from-red-600 to-amber-600 rounded-3xl shadow-2xl max-w-6xl mx-auto mt-20 transform-gpu ${isVisible ? 'animate-fade-in' : 'opacity-0'}" style={{ transitionDelay: '1.8s' }}>
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
-            Ready to Begin Your Story?
-          </h2>
-          <p className="text-lg text-white mb-10 max-w-3xl mx-auto opacity-90">
-            Join thousands of happy individuals who found their perfect match. Your journey to lasting love starts here.
-          </p>
-          <button className="group bg-white text-amber-700 px-10 py-4 rounded-full font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center mx-auto space-x-3 transform hover:scale-105">
-            <span>Find Your Match Now</span>
-            <ChevronRight className="w-6 h-6 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-          </button>
-        </section>
+        
       </main>
-
-      <Footer /> {/* Your Footer Component */}
 
       {/* Embedded Style Block for Animations (Same as original but adjusted delays where needed) */}
       <style>{`

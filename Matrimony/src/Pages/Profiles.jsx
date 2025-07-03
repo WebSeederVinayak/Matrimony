@@ -11,7 +11,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 font-inter text-gray-800">
+    <div className="min-h-screen bg-gray-50 font-inter text-gray-800 mt-10">
       {/* Profiles Section */}
       <ProfilesSection isVisible={isVisible} />
     </div>

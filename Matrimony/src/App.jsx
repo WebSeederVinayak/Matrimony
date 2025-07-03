@@ -14,6 +14,7 @@ import TestimonialSection from './Components/Testimonial.jsx';
 import Info from './Components/Info.jsx';
 import Profiles from './Pages/Profiles.jsx'; // Import your new Profiles component
 import AboutUsPage from './Pages/About.jsx';
+import ContactPage from './Pages/Contactpage.jsx'; // Import your Contact page component
 
 
 function App() {
@@ -21,12 +22,16 @@ function App() {
 
   return (
     <BrowserRouter> {/* Wrap your entire app with BrowserRouter */}
-      <Header />
+      <div className='mb-0'>
+        <Header />
+      </div>
 
       <Routes> {/* Define your routes here */}
         <Route path="/" element={
           <>
-            <MatrimonyHero />
+            <div className='mt-20'>
+              <MatrimonyHero />
+            </div>
             <Info />
             <MembershipSection />
             <PersonalMatchmakingSection />
@@ -34,8 +39,9 @@ function App() {
             <ContactForm />
           </>
         } />
-        <Route path="/about" element={<AboutUsPage />} /> 
+        <Route path="/aboutus" element={<AboutUsPage />} /> 
         <Route path="/profiles" element={<Profiles />} /> {/* Route for the profiles page */}
+        <Route path="/contactus" element={<ContactPage />} /> 
       </Routes>
 
       <Footer />
