@@ -80,9 +80,9 @@ export default function PersonalMatchmaking() {
         </div>
 
         {/* Service Highlights - Integrated below header */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"> {/* Changed to md:grid-cols-3 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 mb-16"> {/* Changed to md:grid-cols-3 */}
           {serviceHighlights.map((item, index) => (
-            <div key={index} className="text-center group animate-fade-in-up" style={{ animationDelay: `${100 + index * 75}ms` }}>
+            <div key={index} className="text-center lg:w-70 lg:ml-15 group animate-fade-in-up" style={{ animationDelay: `${100 + index * 75}ms` }}>
               <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 hover:border-amber-400 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-amber-400/10 transform group-hover:-translate-y-1 h-48 flex flex-col justify-between">
                 <div className="text-3xl font-light text-amber-400 mb-1">{item.icon}</div>
                 <div className="text-base font-medium mb-1 flex-grow">{item.label}</div>

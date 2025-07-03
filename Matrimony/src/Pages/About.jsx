@@ -114,11 +114,11 @@ const AboutUsPage = () => {
             {/* Right Column: Illustrative Image */}
             <div className={`relative bg-gray-100 rounded-3xl shadow-2xl overflow-hidden min-h-[300px] lg:min-h-[450px] flex items-center justify-center ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`} style={{ transitionDelay: '1.3s' }}>
               <img
-                src="https://placehold.co/600x400/FFF8E1/E57373?text=Connecting+Couples" // Placeholder image
+                src="/images/couple1.jpg" // Placeholder image
                 alt="Connecting Couples Illustration"
                 className="w-full h-full object-cover transform scale-105 hover:scale-100 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/30 to-red-500/30"></div>
+              
               <div className="absolute bottom-6 right-6 p-4 bg-white rounded-full shadow-lg text-red-600 flex items-center space-x-2 animate-pulse-slow">
                 <TrendingUp className="w-6 h-6" />
                 <span className="font-bold text-lg">Growing Community</span>
