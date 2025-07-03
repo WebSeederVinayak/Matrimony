@@ -16,10 +16,18 @@ export default function Info() {
 
         {/* Main Section Header with Bold Statement */}
         <div className="text-center mb-28 relative">
-          <h2 className="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-8 leading-tight drop-shadow-lg animate-fade-in-up-stagger-1">
-            Unlock Your <span className="text-red-600">Love Story</span>
+          <h2 className="text-5xl lg:text-6xl font-light mb-4 tracking-tight">
+            <span className="font-thin">Unlock your </span>
+           
+            <span className="font-bold bg-gradient-to-r from-amber-400 to-red-500 bg-clip-text text-transparent">
+              Love Story
+            </span>
             <br />
-            Find Your <span className="text-amber-600">Forever Partner</span>
+            <span className="font-thin">Find your </span>
+            
+            <span className="font-bold bg-gradient-to-l from-amber-400 to-red-500 bg-clip-text text-transparent">
+              Forever partner
+            </span>
           </h2>
           <p className="text-xl lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in-up-stagger-2">
             We are dedicated to helping you discover profound connections and build a future filled with happiness and companionship.

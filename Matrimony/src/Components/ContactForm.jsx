@@ -64,8 +64,12 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Get in Touch
+          <h2 className="text-5xl lg:text-6xl font-light mb-4 tracking-tight">
+            
+         
+            <span className="font-bold bg-gradient-to-r from-amber-400 to-red-500 bg-clip-text text-transparent">
+              Get in Touch
+            </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Have questions or need assistance? Fill out the form below, and our team will get back to you shortly.

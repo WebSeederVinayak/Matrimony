@@ -43,7 +43,7 @@ export default function MatrimonyFooter() {
             <ul className="space-y-3">
               <li><Link to="/" onClick={() => scrollToSection('top')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Home</Link></li>
               <li><Link to="/aboutus" onClick={() => scrollToSection('top')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>About Us</Link></li>
-              <li><Link to="/profiles" onClick={() => scrollToSection('top')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Clients</Link></li>
+              <li><Link to="/profiles" onClick={() => scrollToSection('top')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Profiles</Link></li>
               <li><Link to="/contactus" onClick={() => scrollToSection('top')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Contact Us</Link></li>
             </ul>
           </div>
@@ -80,7 +80,7 @@ export default function MatrimonyFooter() {
             <span className="text-gray-700 font-medium text-lg" style={{ fontFamily: 'Exo 2' }}>Download Our App</span>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-300" style={{ fontFamily: 'Exo 2' }}>
+            <a href="https://play.google.com/store/apps/details?id=com.brahminmilanbyappwin.app&amp;pcampaignid=web_share" className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-300" style={{ fontFamily: 'Exo 2' }}>
               <img src="/images/gplay.png" alt="Google Play" className="h-5 mr-2" />
               Google Play
             </a>
