@@ -29,9 +29,11 @@ export default function TestimonialSection() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-24 relative">
-          <h2 className="text-5xl lg:text-6xl font-extrabold mb-6 leading-snug drop-shadow-md animate-fade-in-up-stagger-1">
-            <span className="text-black">
-              Hear From Our <span className='bg-gradient-to-r from-red-500 via-yellow-400 to-amber-500 bg-clip-text text-transparent' > Happy Couples </span>
+          <h2 className="text-5xl lg:text-6xl font-light mb-4 tracking-tight">
+            <span className="font-thin">Hear from our </span>
+         
+            <span className="font-bold bg-gradient-to-r from-amber-400 to-red-500 bg-clip-text text-transparent">
+              Happy Couples
             </span>
           </h2>
           <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-stagger-2">
