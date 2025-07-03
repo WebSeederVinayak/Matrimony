@@ -31,7 +31,7 @@ const MatrimonyHero = () => {
         backgroundSize: '40px 40px'
       }}></div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-3 lg:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           {/* Left Content */}
@@ -88,7 +88,7 @@ const MatrimonyHero = () => {
                 to="/profiles" // Use 'to' prop for navigation
                 className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4  rounded-xl font-semibold text-lg transition-all duration-300 w-full sm:w-[16.25rem]"
               >
-                <span className="text-center">Browse Profiles</span>
+                <span>Browse Profiles</span>
                 
               </Link>
             </div>
