@@ -16,60 +16,73 @@ export default function Info() {
 
         {/* Main Section Header with Bold Statement */}
         <div className="text-center mb-28 relative">
-          <h2 className="text-5xl lg:text-6xl font-light mb-4 tracking-tight">
-            <span className="font-thin">Unlock your </span>
-           
+          <h2 className="text-5xl lg:text-6xl font-light mb-4 tracking-tight"
+            // Note: For 'Tilt Neon' heading font, you would configure it in your tailwind.config.js or global CSS.
+            // Example in tailwind.config.js:
+            // theme: {
+            //   extend: {
+            //     fontFamily: {
+            //       heading: ['"Tilt Neon"', 'sans-serif'],
+            //       body: ['"Exo 2"', 'sans-serif'],
+            //     },
+            //   },
+            // },
+            // Then apply with className="font-heading"
+          >
+            <span className="font-thin">Your </span>
             <span className="font-bold bg-gradient-to-r from-amber-400 to-red-500 bg-clip-text text-transparent">
-              Love Story
+              Brahmin Milan
             </span>
             <br />
-            <span className="font-thin">Find your </span>
-            
+            <span className="font-thin">Begins </span>
             <span className="font-bold bg-gradient-to-l from-amber-400 to-red-500 bg-clip-text text-transparent">
-              Forever partner
+              Here
             </span>
           </h2>
-          <p className="text-xl lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in-up-stagger-2">
-            We are dedicated to helping you discover profound connections and build a future filled with happiness and companionship.
+          <p className="text-xl lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in-up-stagger-2"
+            // Note: For 'Exo 2' primary font, you would configure it in your tailwind.config.js or global CSS.
+            // Then apply with className="font-body"
+          >
+            Our platform is dedicated to helping you find a lifelong partner who aligns with your values, aspirations, and dreams. We offer a trusted and supportive space to connect with potential matches, ensuring a smooth and meaningful journey towards a happy and fulfilling marriage.
           </p>
           {/* Subtle icon flourish */}
-          <Sparkles className="absolute top-4 right-1/4 h-12 w-12 text-amber-400 opacity-70 animate-sparkle-float hidden lg:block" />
-          <Heart className="absolute bottom-4 left-1/4 h-10 w-10 text-red-400 opacity-70 animate-sparkle-float animation-delay-300 hidden lg:block" />
+          <Sparkles className="absolute top-4 right-1/6 h-12 w-12 text-amber-400 opacity-70 animate-sparkle-float hidden lg:block" />
+          <Heart className="absolute bottom-4 left-1 h-10 w-10 text-red-400 opacity-70 animate-sparkle-float animation-delay-300 hidden lg:block" />
         </div>
 
         {/* Dynamic Grid Layout for Core Values */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-28">
 
-          {/* Value Card 1: Legacy */}
+          {/* Value Card 1: Exclusive Community Focus */}
           <div className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-amber-500 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-amber-600 animate-slide-in-bottom">
             <div className="bg-amber-100 text-amber-700 rounded-full p-5 mb-6 shadow-md transition-all duration-300 group-hover:bg-amber-200">
-              <Calendar className="h-12 w-12" />
+              <Users className="h-12 w-12" /> {/* Changed icon to Users for community focus */}
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Proven Track Record</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Exclusive Community Focus</h3>
             <p className="text-gray-600 leading-relaxed">
-              Established since <span className="font-semibold text-amber-700">2010</span>, we've fostered over <span className="font-extrabold text-red-600">50,000 successful unions</span>.
+              Dedicated exclusively to the <span className="font-semibold text-amber-700">Brahmin community</span>, we ensure matches that align with your shared values and traditions.
             </p>
           </div>
 
-          {/* Value Card 2: Technology */}
+          {/* Value Card 2: Find Your Perfect Match */}
           <div className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-red-500 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-red-600 animate-slide-in-bottom animation-delay-200">
             <div className="bg-red-100 text-red-700 rounded-full p-5 mb-6 shadow-md transition-all duration-300 group-hover:bg-red-200">
-              <Zap className="h-12 w-12" />
+              <Heart className="h-12 w-12" /> {/* Changed icon to Heart for finding match */}
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Smart Matching</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Find Your Perfect Match</h3>
             <p className="text-gray-600 leading-relaxed">
-              Our <span className="font-semibold text-amber-700">advanced AI</span> intelligently connects you with truly compatible partners.
+              Our <span className="font-semibold text-amber-700">advanced matching</span> intelligently connects you with truly compatible partners for a fulfilling marriage.
             </p>
           </div>
 
-          {/* Value Card 3: Security & Support */}
+          {/* Value Card 3: Verified & Secure Platform */}
           <div className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-amber-500 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-amber-600 animate-slide-in-bottom animation-delay-400">
             <div className="bg-amber-100 text-amber-700 rounded-full p-5 mb-6 shadow-md transition-all duration-300 group-hover:bg-amber-200">
               <Shield className="h-12 w-12" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Trusted & Secure</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Verified & Secure Platform</h3>
             <p className="text-gray-600 leading-relaxed">
-              Benefit from <span className="font-semibold text-red-600">100% verified profiles</span> and dedicated customer support.
+              Benefit from <span className="font-semibold text-red-600">100% verified matrimonial profiles</span> and a dedicated safe & secure environment.
             </p>
           </div>
         </div>
@@ -80,11 +93,10 @@ export default function Info() {
             {/* Placeholder for an engaging image or illustration */}
             <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('/images/couple.png')"}}></div>
             <div className="absolute inset-0 bg-amber-600 opacity-30 mix-blend-multiply"></div>
-            
           </div>
           <div className="w-full lg:w-1/2 p-12 lg:p-16 text-gray-800">
             <h3 className="text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
-              Our Journey to Love: <span className="text-red-600">Simple & Effective</span>
+              Your Journey to a <span className="text-red-600">Fulfilling Marriage</span>
             </h3>
             <div className="space-y-6">
               <div className="flex items-start">
@@ -97,22 +109,21 @@ export default function Info() {
               <div className="flex items-start">
                 <Check className="h-7 w-7 text-amber-600 mr-4 flex-shrink-0 animate-checkmark animation-delay-100" />
                 <div>
-                  <h4 className="font-bold text-xl text-gray-900">Intelligent Match Discovery</h4>
-                  <p className="text-gray-700 mt-1">Receive hand-picked matches daily, filtered for deep compatibility.</p>
+                  <h4 className="font-bold text-xl text-gray-900">Show Interest & Connect</h4>
+                  <p className="text-gray-700 mt-1">Seamlessly show interest in profiles and connect with potential matches through our intuitive features.</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Check className="h-7 w-7 text-amber-600 mr-4 flex-shrink-0 animate-checkmark animation-delay-200" />
                 <div>
-                  <h4 className="font-bold text-xl text-gray-900">Secure & Engaging Communication</h4>
-                  <p className="text-gray-700 mt-1">Connect safely with potential partners through our secure messaging system.</p>
+                  <h4 className="font-bold text-xl text-gray-900">Instant Notifications & Support</h4>
+                  <p className="text-gray-700 mt-1">Receive instant notifications for new matches and interests, along with our dedicated support team.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-   
       </div>
 
       {/* Embedded Style Block for Animations */}

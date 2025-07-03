@@ -52,15 +52,15 @@ export default function ContactPage() {
           <section className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Our Office</h2>
             <div className="text-center text-gray-700">
-              <p className="text-lg font-semibold">Matrimony App Headquarters</p>
-              <p>123 Matrimony Lane, Loveville, Dreamland 12345</p>
+              {/* <p className="text-lg font-semibold">Matrimony App Headquarters</p> */}
+              <p>Vijay Nagar, Indore, INDIA</p>
               <p className="mt-4">
-                **Office Hours:** Monday - Friday: 9:00 AM - 5:00 PM (IST)
+                Office Hours: Monday - Friday: 9:00 AM - 5:00 PM (IST)
               </p>
               <p>Saturday & Sunday: Closed</p>
               <p className="mt-4">
-                <a href="tel:+911234567890" className="text-blue-600 hover:underline">
-                  +91 123 456 7890
+                <a href="tel:+918871186630" className="text-blue-600 hover:underline">
+                  +91 8871186630
                 </a>
               </p>
             </div>

@@ -94,7 +94,7 @@ const ProfilesSection = ({ isVisible }) => {
               Unlock the Full Story.
             </h3>
             <p className="text-xl mb-10 max-w-md">
-              Become a **Premium Member** today to reveal full profile details, enable direct messaging, and access our advanced matching algorithms.
+              Become a Premium Member today to reveal full profile details, enable direct messaging, and access our advanced matching algorithms.
             </p>
             <button className="group bg-white text-amber-700 px-12 py-5 rounded-full font-bold text-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-3 transform hover:scale-105 border-2 border-white hover:border-amber-700">
               <Sparkles className="w-7 h-7 text-amber-600 group-hover:rotate-180 transition-transform duration-500" />

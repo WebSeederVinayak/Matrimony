@@ -188,7 +188,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <p className="text-gray-700 font-semibold">Call Us</p>
-                    <a href="tel:+911234567890" className="text-gray-600 hover:text-amber-600 transition-colors duration-200">+91 12345 67890</a>
+                    <a href="tel:+918871186630" className="text-gray-600 hover:text-amber-600 transition-colors duration-200">+91 8871186630</a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -197,7 +197,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <p className="text-gray-700 font-semibold">Email Us</p>
-                    <a href="mailto:info@matrimony.com" className="text-gray-600 hover:text-amber-600 transition-colors duration-200">info@matrimony.com</a>
+                    <a href="mailto:projects@appwin.in" className="text-gray-600 hover:text-amber-600 transition-colors duration-200">projects@appwin.in</a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -206,7 +206,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <p className="text-gray-700 font-semibold">Our Office</p>
-                    <p className="text-gray-600">123 Matrimony Lane, New Delhi, India</p>
+                    <p className="text-gray-600">Vijay Nagar, Indore, India</p>
                   </div>
                 </div>
               </div>
