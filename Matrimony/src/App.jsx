@@ -22,16 +22,7 @@ function App() {
   return (
     <BrowserRouter> {/* Wrap your entire app with BrowserRouter */}
       <Header />
-<<<<<<< HEAD
-      <div className="pt-[88px]"> 
-        <MatrimonyHero />
-      </div>
-      <Info />
-      <MembershipSection />
-      <PersonalMatchmakingSection />
-      <TestimonialSection />
-      <ContactForm />
-=======
+
       <Routes> {/* Define your routes here */}
         <Route path="/" element={
           <>
@@ -46,7 +37,7 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} /> 
         <Route path="/profiles" element={<Profiles />} /> {/* Route for the profiles page */}
       </Routes>
->>>>>>> 6a19d00 (reated profiles page and about us page, modified header, added routing paths)
+
       <Footer />
     </BrowserRouter>
   );

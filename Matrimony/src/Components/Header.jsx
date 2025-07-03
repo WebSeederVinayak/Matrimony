@@ -1,9 +1,6 @@
 import { Search, ChevronDown } from 'lucide-react';
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-=======
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
->>>>>>> 6a19d00 (reated profiles page and about us page, modified header, added routing paths)
+import React, { useState, useEffect } from 'react';
 
 export default function MatrimonyHeader() {
   const [isVisible, setIsVisible] = useState(true);
@@ -50,23 +47,6 @@ export default function MatrimonyHeader() {
             />
           </div>
 
-<<<<<<< HEAD
-          {/* Navigation Menu (Desktop) */}
-          <nav className="hidden md:flex items-between space-x-12">
-            {['Home', 'About Us', 'Clients', 'Contact Us'].map((item) => (
-              <div key={item} className="relative group">
-                <a
-                  href="#"
-                  className="block text-gray-700 hover:text-red-500 text-xl font-sans transition-colors duration-200 ease-in-out transform group-hover:scale-105"
-                  style={{ fontFamily: 'Exo 2' }} // Applying Exo 2 font
-                >
-                  {item}
-                </a>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-              </div>
-            ))}
-          </nav>
-=======
         {/* Navigation Menu */}
         <nav className="hidden md:flex items-between space-x-12">
           {/* Home */}
@@ -83,7 +63,7 @@ export default function MatrimonyHeader() {
             </div>
           ))}
         </nav>
->>>>>>> 6a19d00 (reated profiles page and about us page, modified header, added routing paths)
+
 
           {/* Auth Buttons */}
           <div className="flex items-center space-x-4">
