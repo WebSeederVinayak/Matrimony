@@ -126,7 +126,7 @@ export default function MatrimonyHeader() {
       {/* Backdrop for Mobile Menu */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 transition-opacity duration-300 ease-in-out md:hidden"
+          className="fixed inset-0 bg-transparent bg-opacity-50 backdrop-blur-sm z-30 transition-opacity duration-300 ease-in-out md:hidden"
           onClick={toggleMobileMenu} // Close menu when backdrop is clicked
         ></div>
       )}

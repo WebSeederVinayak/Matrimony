@@ -27,7 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
-            <div className='mt-20'>
+            <div className='mt-10 lg:mt-20'>
               <MatrimonyHero />
             </div>
             <Info />

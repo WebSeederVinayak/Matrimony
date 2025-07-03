@@ -50,7 +50,7 @@ const MatrimonyHero = () => {
             </div>
 
             {/* Key Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6"> {/* Changed to sm:grid-cols-3 for better small screen layout */}
+            <div className="hidden md:grid grid grid-cols-1 sm:grid-cols-3 gap-6"> {/* Changed to sm:grid-cols-3 for better small screen layout */}
               <div className="group text-center p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
                   <BadgeCheck className="w-6 h-6 text-amber-600 group-hover:text-white" /> {/* Changed Shield to BadgeCheck */}
