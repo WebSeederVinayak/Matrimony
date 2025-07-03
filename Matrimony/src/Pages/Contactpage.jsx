@@ -4,7 +4,7 @@ import ContactForm from '../Components/ContactForm';
 export default function ContactPage() {
   return (
     // Main container now takes full width, with less restrictive horizontal padding on the outer div.
-    <div className="min-h-screen w-full bg-gray-50 font-sans antialiased flex flex-col items-center py-30">
+    <div className="min-h-screen w-full bg-gray-50 font-sans antialiased flex flex-col items-center mt-20 py-10">
 
       {/* Contact Form Section - Now much wider */}
       {/* max-w-7xl is a significant increase, covering most of the screen width */}

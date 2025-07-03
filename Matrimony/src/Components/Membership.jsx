@@ -48,7 +48,7 @@ export default function MembershipSection() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-amber-50 via-white to-red-50">
+    <section className="py-10 bg-gradient-to-br from-amber-50 via-white to-red-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-24 relative">

@@ -13,7 +13,7 @@ const AboutUsPage = () => {
   }, []);
 
   return (
-    <div className="font-exo2 text-gray-800 bg-gray-50 min-h-screen mt-10">
+    <div className="font-exo2 text-gray-800 bg-gray-50 min-h-screen mt-10 ">
       
       <main className="relative overflow-hidden py-16 lg:py-24">
         {/* Background Gradients and Shapes */}
@@ -24,7 +24,7 @@ const AboutUsPage = () => {
         </div>
 
         {/* Hero Section: Our Story */}
-        <section className="relative z-10 text-center px-6 mb-20 lg:mb-32">
+        <section className="relative z-10 text-center px-6 mb-0 lg:mb-0">
           <h2 className="text-5xl lg:text-6xl font-light mb-4 tracking-tight"
             // Note: For 'Tilt Neon' heading font, you would configure it in your tailwind.config.js or global CSS.
             // Example in tailwind.config.js:
@@ -59,7 +59,7 @@ const AboutUsPage = () => {
         {/* --- */}
 
         {/* Section: Our Values */}
-        <section className="relative z-10 px-6 py-16 bg-white rounded-3xl shadow-xl max-w-7xl mx-auto mb-20 lg:mb-32 transform-gpu ${isVisible ? 'animate-fade-in' : 'opacity-0'}" style={{ transitionDelay: '0.8s' }}>
+        <section className="relative z-10 px-6 py-10 bg-white rounded-3xl shadow-xl max-w-7xl mx-auto mb-20 lg:mb-20 transform-gpu ${isVisible ? 'animate-fade-in' : 'opacity-0'}" style={{ transitionDelay: '0.8s' }}>
           <h2 className="text-4xl lg:text-5xl font-tilt-neon font-medium text-gray-900 text-center mb-12">
             The Values That Drive Us
           </h2>
@@ -100,7 +100,7 @@ const AboutUsPage = () => {
         {/* --- */}
 
         {/* Section: How We Stand Out (Feature Section) */}
-        <section className="relative z-10 px-6 max-w-7xl mx-auto mb-20 lg:mb-32">
+        <section className="relative z-10 px-6 max-w-7xl mx-auto mb-20 lg:mb-2">
           <h2 className="text-5xl lg:text-6xl text-center font-light mb-6 tracking-tight">
             <span className="font-thin">Why Choose </span>
             
@@ -108,7 +108,7 @@ const AboutUsPage = () => {
               BrahminMilan?
             </span>
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-25 items-center">
             {/* Left Column: Feature List */}
             <div className="space-y-8 bg-white p-10 rounded-3xl shadow-xl border-l-8 border-red-500 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}" style={{ transitionDelay: '1.2s' }}>
               <div className="flex items-start">
@@ -135,7 +135,7 @@ const AboutUsPage = () => {
             </div>
 
             {/* Right Column: Illustrative Image */}
-            <div className={`relative bg-gray-100 rounded-3xl shadow-2xl overflow-hidden min-h-[300px] lg:min-h-[450px] flex items-center justify-center ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`} style={{ transitionDelay: '1.3s' }}>
+            <div className={`relative bg-gray-100 rounded-3xl shadow-2xl overflow-hidden min-h-[300px] lg:min-h-[400px] flex items-center justify-center ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`} style={{ transitionDelay: '1.3s' }}>
               <img
                 src="/images/couple1.jpg" // Placeholder image
                 alt="Connecting Couples Illustration"
@@ -153,10 +153,10 @@ const AboutUsPage = () => {
         {/* --- */}
 
         {/* Testimonials Section */}
-        <TestimonialSection /> {/* Your Testimonials Component */}
+        {/* Your Testimonials Component */}
         
       </main>
-
+        <TestimonialSection />
       {/* Embedded Style Block for Animations (Same as original but adjusted delays where needed) */}
       <style>{`
         @keyframes fadeIn {

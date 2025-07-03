@@ -3,7 +3,7 @@ import { Calendar, Users, Briefcase, Heart, Shield, Zap, Sparkles, Handshake, Me
 
 export default function Info() {
   return (
-    <section className="py-28 bg-gradient-to-br from-amber-50 via-white to-red-50 relative overflow-hidden">
+    <section className="py-10 bg-gradient-to-br from-amber-50 via-white to-red-50 relative overflow-hidden">
       {/* Background Shapes and Gradients for Dynamic Feel */}
       <div className="absolute top-0 left-0 w-full h-full">
         {/* Large flowing amber shape */}
@@ -88,7 +88,7 @@ export default function Info() {
         </div>
 
         {/* Feature Section: How We Work - Left Image, Right Text (with overlap) */}
-        <div className="flex flex-col lg:flex-row items-center bg-white rounded-3xl shadow-2xl overflow-hidden mb-28 border-l-8 border-red-500 animate-fade-in">
+        <div className="flex flex-col lg:flex-row items-center bg-white rounded-3xl shadow-2xl overflow-hidden mb-4 border-l-8 border-red-500 animate-fade-in">
           <div className="relative w-full lg:w-1/2 h-80 lg:h-130 bg-amber-100 p-8 flex items-center rounded-2xl justify-center">
             {/* Placeholder for an engaging image or illustration */}
             <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('/images/couple.png')"}}></div>

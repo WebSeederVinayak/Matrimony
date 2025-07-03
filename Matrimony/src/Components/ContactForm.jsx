@@ -50,7 +50,7 @@ export default function ContactForm() {
   }, [message]);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-amber-50 via-white to-red-50 relative">
+    <section className="py-10 bg-gradient-to-br from-amber-50 via-white to-red-50 relative">
       {/* Custom Message Box */}
       {message && (
         <div className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 p-4 rounded-lg shadow-lg flex items-center space-x-3 transition-all duration-300 ${
