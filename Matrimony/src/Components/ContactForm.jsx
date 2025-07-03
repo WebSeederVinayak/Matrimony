@@ -206,7 +206,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <p className="text-gray-700 font-semibold">Our Office</p>
-                    <p className="text-gray-600">Vijay Nagar, Indore, India</p>
+                    <p className="text-gray-600">Vijay Nagar, Indore, INDIA</p>
                   </div>
                 </div>
               </div>
