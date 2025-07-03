@@ -13,9 +13,8 @@ const AboutUsPage = () => {
   }, []);
 
   return (
-    <div className="font-inter text-gray-800 bg-gray-50 min-h-screen mt-10">
+    <div className="font-exo2 text-gray-800 bg-gray-50 min-h-screen mt-10">
       
-
       <main className="relative overflow-hidden py-16 lg:py-24">
         {/* Background Gradients and Shapes */}
         <div className="absolute top-0 left-0 w-full h-full">
@@ -26,11 +25,11 @@ const AboutUsPage = () => {
 
         {/* Hero Section: Our Story */}
         <section className="relative z-10 text-center px-6 mb-20 lg:mb-32">
-          <h1 className={`text-5xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight drop-shadow-lg ${isVisible ? 'animate-fade-in-up-stagger-1' : 'opacity-0'}`}>
+          <h1 className={`text-5xl lg:text-5xl font-tilt-neon font-extrabold text-gray-900 mb-6 leading-tight drop-shadow-lg ${isVisible ? 'animate-fade-in-up-stagger-1' : 'opacity-0'}`}>
             Our Mission: <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-amber-600">Connecting Hearts</span>
           </h1>
           <p className={`text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed ${isVisible ? 'animate-fade-in-up-stagger-2' : 'opacity-0'}`}>
-            At **[Your Website Name]**, we believe in the power of genuine connection. We're dedicated to building meaningful relationships that last a lifetime, driven by shared values and mutual respect.
+            At BrahminMilan, we believe in the power of genuine connection. We're dedicated to building meaningful relationships that last a lifetime, driven by shared values and mutual respect.
           </p>
           <div className="mt-10 flex justify-center space-x-6">
             <Heart className={`w-12 h-12 text-red-500 animate-pulse-slow ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '0.5s' }} />
@@ -42,7 +41,7 @@ const AboutUsPage = () => {
 
         {/* Section: Our Values */}
         <section className="relative z-10 px-6 py-16 bg-white rounded-3xl shadow-xl max-w-7xl mx-auto mb-20 lg:mb-32 transform-gpu ${isVisible ? 'animate-fade-in' : 'opacity-0'}" style={{ transitionDelay: '0.8s' }}>
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-tilt-neon font-extrabold text-gray-900 text-center mb-12">
             The Values That Drive Us
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -83,8 +82,8 @@ const AboutUsPage = () => {
 
         {/* Section: How We Stand Out (Feature Section) */}
         <section className="relative z-10 px-6 max-w-7xl mx-auto mb-20 lg:mb-32">
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-12">
-            Why Choose <span className="text-amber-600">[Your Website Name]</span>?
+          <h2 className="text-4xl lg:text-5xl font-tilt-neon font-extrabold text-gray-900 text-center mb-12">
+            Why Choose <span className="text-amber-600">BrahminMilan</span>?
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column: Feature List */}

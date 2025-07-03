@@ -36,13 +36,13 @@ const MatrimonyHero = () => {
             {/* Main Heading */}
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-tight">
-                Where Love
+                With BrahminMilan
                 <span className="block bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">
-                  Finds Its Way
+                  Love Finds You
                 </span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-xl">
-                Discover meaningful connections with compatible partners who share your values, dreams, and vision for the future.
+                Meet compatible partners who share your values, dreams, and vision for a beautiful future together.
               </p>
             </div>
 
