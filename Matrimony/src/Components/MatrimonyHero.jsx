@@ -101,8 +101,8 @@ const MatrimonyHero = () => {
             <div className="relative">
               
               {/* Primary Image - Elegant Couple */}
-              <div className="relative z-10 bg-white p-6 rounded-3xl shadow-2xl transform transition-transform duration-500 ease-out hover:scale-[1.02]">
-                <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-amber-100 to-yellow-100 relative">
+              <div className="relative lg:h-160 lg:w-fit z-10 bg-white p-6 rounded-3xl shadow-2xl transform transition-transform duration-500 ease-out hover:scale-[1.02]">
+                <div className="aspect-[4/5] lg:h-150 rounded-2xl overflow-hidden bg-gradient-to-br from-amber-100 to-yellow-100 relative">
                   <img 
                     src="/images/heromain.jpg"
                     alt="Happy couple"
@@ -127,7 +127,7 @@ const MatrimonyHero = () => {
               </div>
 
               {/* Third Image - Traditional Wedding */}
-              <div className="absolute -top-6 -right-6 z-20 bg-white p-3 rounded-xl shadow-lg transform -rotate-6 hover:-rotate-3 transition-transform duration-300 ease-out hover:scale-110">
+              <div className="absolute -top-6 -right-6 lg:right-30 z-20 bg-white p-3 rounded-xl shadow-lg transform -rotate-6 hover:-rotate-3 transition-transform duration-300 ease-out hover:scale-110">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <img 
                     src="/images/wedding.jpg"
