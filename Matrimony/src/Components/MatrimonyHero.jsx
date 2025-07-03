@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, ArrowRight, BadgeCheck, Users } from 'lucide-react'; // Changed Shield to BadgeCheck
+import { Heart, ArrowRight, BadgeCheck, Users } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const MatrimonyHero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,8 +19,12 @@ const MatrimonyHero = () => {
   // Closest to 'matrimony-golden' #D4A349 is perhaps amber-600 or yellow-600. Let's use yellow-600 for its hex.
   const patternColorHex = '#d97706'; // Approximate hex for amber-600
 
+  // The navigateTo function is no longer needed as Link components handle navigation
+
   return (
-    <div className="min-h-[0vh] bg-gradient-to-br from-amber-50 via-white to-amber-50 relative overflow-hidden flex items-center py-12">
+    // Apply Exo 2 font to the entire component
+    <div className="min-h-[0vh] bg-gradient-to-br from-amber-50 via-white to-amber-50 relative overflow-hidden flex items-center py-12"
+         style={{ fontFamily: "'Exo 2', sans-serif" }}>
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23${patternColorHex.slice(1)}' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
@@ -32,28 +37,25 @@ const MatrimonyHero = () => {
           {/* Left Content */}
           <div className={`space-y-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             
-
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-light mb-4 tracking-tight">
-            <span className="font-semibold bg-gradient-to-r from-amber-400 to-red-500 bg-clip-text text-transparent">
-              BrahminMilan
-            </span>
-              <br />
-            <span className="font-thin text-5xl">Meet New People</span>
-          
-            
-          </h1>
+              <h1 className="text-6xl lg:text-7xl mb-4 tracking-tight" style={{ fontFamily: "'Tilt Neon', cursive" }}> {/* Apply Tilt Neon font here */}
+                <span className="font-semibold bg-gradient-to-r from-amber-400 to-red-500 bg-clip-text text-transparent">
+                  BrahminMilan
+                </span>
+                <br />
+                <span className="font-thin text-5xl">Meet New People</span>
+              </h1>
               <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl">
                 Meet compatible partners who share your values, dreams, and vision for a beautiful future together.
               </p>
             </div>
 
             {/* Key Features */}
-            <div className="hidden md:grid grid grid-cols-1 sm:grid-cols-3 gap-6"> {/* Changed to sm:grid-cols-3 for better small screen layout */}
+            <div className="hidden md:grid grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="group text-center p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
-                  <BadgeCheck className="w-6 h-6 text-amber-600 group-hover:text-white" /> {/* Changed Shield to BadgeCheck */}
+                  <BadgeCheck className="w-6 h-6 text-amber-600 group-hover:text-white" />
                 </div>
                 <div className="text-sm font-semibold text-gray-800">Verified Profiles</div>
               </div>
@@ -73,23 +75,27 @@ const MatrimonyHero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              {/* Removed hover:scale-105 to prevent "bugging" effect */}
-              <button className="group bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-4 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 w-full sm:w-[16.25rem]">
+              {/* Start Your Journey Button */}
+              <Link // Changed button to Link
+                to="/contactus" // Use 'to' prop for navigation
+                className="group bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-4 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 w-full sm:w-[16.25rem]"
+              >
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              {/* Removed hover:scale-105 to prevent "bugging" effect */}
-              <button className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4  rounded-xl font-semibold text-lg transition-all duration-300 w-full sm:w-[16.25rem]">
-                Browse Profiles
-              </button>
+              </Link>
+              {/* Browse Profiles Button */}
+              <Link // Changed button to Link
+                to="/profiles" // Use 'to' prop for navigation
+                className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4  rounded-xl font-semibold text-lg transition-all duration-300 w-full sm:w-[16.25rem]"
+              >
+                <span className="text-center">Browse Profiles</span>
+                
+              </Link>
             </div>
-
-            {/* Statistics */}
-            
           </div>
 
           {/* Right Visual Section */}
-          <div className={`relative transition-all duration-1000 ease-out delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}> {/* Adjusted delay */}
+          <div className={`relative transition-all duration-1000 ease-out delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             
             {/* Main Image Container */}
             <div className="relative">
