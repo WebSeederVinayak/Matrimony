@@ -40,30 +40,31 @@ export default function MatrimonyHeader() {
         <div className="px-3 lg:px-10 max-w-[100%] mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img
-              src="/images/Logo1.jpeg"
-              alt="Matrimony.com"
-              className="h-12 w-12 lg:h-20 lg:w-20 object-contain transform transition-transform duration-300 ease-in-out hover:scale-105"
-            />
+            <Link to="/"> {/* Wrap logo in Link to go to home */}
+              <img
+                src="/images/Logo1.jpeg"
+                alt="Matrimony.com"
+                className="h-12 w-12 lg:h-20 lg:w-20 object-contain transform transition-transform duration-300 ease-in-out hover:scale-105"
+              />
+            </Link>
           </div>
 
-        {/* Navigation Menu */}
-        <nav className="hidden md:flex items-between space-x-12">
-          {/* Home */}
-          {/* Map through navigation items and use Link for routing */}
-          {['Home', 'About Us', 'Profiles', 'Contact Us'].map((item) => (
-            <div key={item} className="relative group">
-              <Link // Use Link component here
-                to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s/g, '')}`} // Determine the 'to' path
-                className="block text-gray-700 hover:text-red-500 text-xl font-sans transition-colors duration-200 ease-in-out transform group-hover:scale-105"
-              >
-                {item}
-              </Link>
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-            </div>
-          ))}
-        </nav>
-
+          {/* Navigation Menu */}
+          <nav className="hidden md:flex items-between space-x-12">
+            {/* Map through navigation items and use Link for routing */}
+            {['Home', 'About Us', 'Profiles', 'Contact Us'].map((item) => (
+              <div key={item} className="relative group">
+                <Link
+                  to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s/g, '')}`}
+                  className="block text-gray-700 hover:text-red-500 text-xl transition-colors duration-200 ease-in-out transform group-hover:scale-105"
+                  style={{ fontFamily: 'Exo 2' }} // Apply Exo 2 to desktop nav links
+                >
+                  {item}
+                </Link>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
+              </div>
+            ))}
+          </nav>
 
           {/* Auth Buttons */}
           <div className="flex items-center space-x-4">
@@ -106,15 +107,16 @@ export default function MatrimonyHeader() {
       >
         <div className="p-4 pt-20"> {/* Add padding-top to account for fixed header */}
           <ul className="flex flex-col space-y-4">
-            {['Home', 'About Us', 'Clients', 'Contact Us'].map((item) => (
+            {['Home', 'About Us', 'Profiles', 'Contact Us'].map((item) => (
               <li key={item}>
-                <a
-                  href="#"
+                <Link // Use Link component here for mobile routes
+                  to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s/g, '')}`}
                   className="block text-xl py-2 px-3 rounded-lg text-gray-700 hover:bg-yellow-100 hover:text-red-600 transition-colors duration-200 ease-in-out"
                   style={{ fontFamily: 'Exo 2' }} // Applying Exo 2 font
+                  onClick={toggleMobileMenu} // Close mobile menu when a link is clicked
                 >
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
