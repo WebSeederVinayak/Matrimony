@@ -22,11 +22,11 @@ const App = () => {
 const ProfilesSection = ({ isVisible }) => {
   // Array of placeholder profile images
   const profiles = [
-    { id: 1, src: "https://placehold.co/300x400/D4A349/ffffff?text=Profile+1", name: "Rahul Sharma", age: 28, profession: "Engineer", location: "Mumbai" },
-    { id: 2, src: "https://placehold.co/300x400/D4A349/ffffff?text=Profile+2", name: "Anjali Singh", age: 30, profession: "Doctor", location: "Delhi" },
-    { id: 3, src: "https://placehold.co/300x400/D4A349/ffffff?text=Profile+3", name: "Vikram Patel", age: 32, profession: "Entrepreneur", location: "Bengaluru" },
-    { id: 4, src: "https://placehold.co/300x400/D4A349/ffffff?text=Profile+4", name: "Pooja Gupta", age: 27, profession: "Designer", location: "Pune" },
-    { id: 5, src: "https://placehold.co/300x400/D4A349/ffffff?text=Profile+5", name: "Suresh Kumar", age: 35, profession: "Architect", location: "Hyderabad" },
+    { id: 1, src: "/images/Rahul.jpeg", name: "Rahul Sharma", age: 28, profession: "Engineer", location: "Mumbai" },
+    { id: 2, src: "/images/Anjali.jpeg", name: "Anjali Singh", age: 30, profession: "Doctor", location: "Delhi" },
+    { id: 3, src: "/images/Vikram.jpeg", name: "Vikram Patel", age: 32, profession: "Entrepreneur", location: "Bengaluru" },
+    { id: 4, src: "/images/Pooja.jpeg", name: "Pooja Gupta", age: 27, profession: "Designer", location: "Pune" },
+    { id: 5, src: "/images/Suresh.jpeg", name: "Suresh Kumar", age: 35, profession: "Architect", location: "Hyderabad" },
   ];
 
   // Pick a random profile to be the "featured" blurred one
