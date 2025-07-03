@@ -10,14 +10,12 @@ import PersonalMatchmakingSection from './Components/PersonalMatchmaking.jsx'
 import ContactForm from './Components/ContactForm.jsx'
 import TestimonialSection from './Components/Testimonial.jsx'
 import Info from './Components/Info.jsx'
-import CursorFollower from './Components/CursorFollower.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <CursorFollower />
       <Header />
       <div className="pt-[88px]"> 
         <MatrimonyHero />

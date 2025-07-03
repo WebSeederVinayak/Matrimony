@@ -177,7 +177,7 @@ export default function ContactForm() {
           <div className="relative z-10 flex flex-col justify-between h-full">
             <div className="mb-8 lg:mb-0"> {/* Margin bottom for spacing on small screens */}
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center lg:text-left">Reach Us Directly</h3>
-              <div className="flex flex-col items-center lg:items-start gap-6"> {/* Aligned to start on large screens */}
+              <div className="flex flex-col items-start lg:items-start gap-6"> {/* Aligned to start on large screens */}
                 <div className="flex items-center space-x-3">
                   <div className="bg-amber-100 text-amber-600 rounded-full p-3">
                     <Phone className="h-6 w-6" />

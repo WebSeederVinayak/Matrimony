@@ -30,7 +30,7 @@ const CursorFollower = () => {
         top: `${position.y}px`,
       }}
     >
-      ❤️ {/* Your heart emoji */}
+      ❤️💗 {/* Your heart emoji */}
       {/* Or if using an image: <img src="/images/heart-icon.svg" alt="heart" className="w-6 h-6" /> */}
     </div>
   );
