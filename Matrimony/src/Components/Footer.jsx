@@ -1,4 +1,4 @@
-// src/Components/MatrimonyFooter.jsx (assuming this is your footer file)
+// src/Components/MatrimonyFooter.jsx
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Smartphone } from 'lucide-react';
 
@@ -30,7 +30,7 @@ export default function MatrimonyFooter() {
             <img
               src="/images/Logo1.jpeg"
               alt="Matrimony.com"
-              className="h-16 w-16"
+              className="h-26 w-28"
             />
             <p className="text-gray-600 text-base leading-relaxed max-w-sm" style={{ fontFamily: 'Exo 2' }}>
               India's most trusted matrimony service, connecting millions of hearts worldwide. Join us to find your perfect match.
@@ -55,8 +55,8 @@ export default function MatrimonyFooter() {
               {/* Updated Links for Services */}
               <li><Link to="/#membership-section" onClick={() => scrollToSection('membership-section')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Free Membership</Link></li>
               <li><Link to="/#membership-section" onClick={() => scrollToSection('membership-section')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Paid Membership</Link></li>
-              <li><Link to="/#personal-matchmaking-section" onClick={() => scrollToSection('personal-matchmaking-section')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Personal Matchmaking</Link></li>
-              <li><Link to="#" onClick={() => scrollToSection('top')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Success Stories</Link></li> {/* Assuming this stays on home or placeholder */}
+              <li><Link to="/#" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Personal Matchmaking</Link></li>
+              <li><Link to="/#testimonial-section" onClick={() => scrollToSection('testimonial-section')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Success Stories</Link></li>
             </ul>
           </div>
 
@@ -65,9 +65,6 @@ export default function MatrimonyFooter() {
             <h3 className="font-semibold text-gray-900 mb-5 text-lg" style={{ fontFamily: 'Tilt Neon' }}>Policies</h3>
             <ul className="space-y-3">
               <li><a href="https://www.appwin.in/policy.html" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Privacy Policy</a></li>
-              <li><Link to="#" onClick={() => scrollToSection('top')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Terms Of Services</Link></li>
-              <li><Link to="#" onClick={() => scrollToSection('top')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Cookie Policy</Link></li>
-              <li><Link to="#" onClick={() => scrollToSection('top')} className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Refund Policy</Link></li>
               <li><a href="https://www.appwin.in/child-safety-policy.html" className="text-gray-700 hover:text-red-600 text-base transition-colors duration-200" style={{ fontFamily: 'Exo 2' }}>Child Safety Policy</a></li>
             </ul>
           </div>
@@ -91,6 +88,10 @@ export default function MatrimonyFooter() {
         <div className="mt-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-center md:text-left">
           <p className="text-sm text-gray-500" style={{ fontFamily: 'Exo 2' }}>
             © 2025 Matrimony.com. All rights reserved.
+          </p>
+          {/* Added 'Developed by appwin Limited' with an anchor tag */}
+          <p className="text-sm text-gray-500" style={{ fontFamily: 'Exo 2' }}>
+            Designed & developed by <a href="https://www.appwin.in/" target="_blank" rel="noopener noreferrer" className="text-black font-bold hover:text-red-600 transition-colors duration-200">Appwin Infotech</a>
           </p>
         </div>
       </div>

@@ -44,32 +44,32 @@ const MatrimonyHero = () => {
                   BrahminMilan
                 </span>
                 <br />
-                <span className="font-thin text-5xl">Meet New People</span>
+                <span className="font-thin text-5xl lg:text-6xl">Meet New People</span>
               </h1>
-              <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl">
+              <p className="text-lg lg:text-2xl text-gray-600 leading-relaxed max-w-xl">
                 Meet compatible partners who share your values, dreams, and vision for a beautiful future together.
               </p>
             </div>
 
             {/* Key Features */}
             <div className="hidden md:grid grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="group text-center p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <div className="group text-center p-4 rounded-xl  transition-all duration-300 transform">
                 <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
                   <BadgeCheck className="w-6 h-6 text-amber-600 group-hover:text-white" />
                 </div>
-                <div className="text-sm font-semibold text-gray-800">Verified Profiles</div>
+                <div className="text-lg font-semibold text-gray-800">Verified Profiles</div>
               </div>
-              <div className="group text-center p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 delay-75">
+              <div className="group text-center p-4 rounded-xl  transition-all duration-300 transform delay-75">
                 <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
                   <Users className="w-6 h-6 text-amber-600 group-hover:text-white" />
                 </div>
-                <div className="text-sm font-semibold text-gray-800">Smart Matching</div>
+                <div className="text-lg font-semibold text-gray-800">Smart Matching</div>
               </div>
-              <div className="group text-center p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 delay-150">
+              <div className="group text-center p-4 rounded-xl transition-all duration-300 transform delay-150">
                 <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
                   <Heart className="w-6 h-6 text-amber-600 group-hover:text-white" />
                 </div>
-                <div className="text-sm font-semibold text-gray-800">Success Stories</div>
+                <div className="text-lg font-semibold text-gray-800">Success Stories</div>
               </div>
             </div>
 
@@ -78,7 +78,7 @@ const MatrimonyHero = () => {
               {/* Start Your Journey Button */}
               <Link // Changed button to Link
                 to="/contactus" // Use 'to' prop for navigation
-                className="group bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-4 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 w-full sm:w-[16.25rem]"
+                className="group bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-4 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 w-full sm:w-[16.25rem] h-15 md:h-15 lg:h-16"
               >
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -86,7 +86,7 @@ const MatrimonyHero = () => {
               {/* Browse Profiles Button */}
               <Link // Changed button to Link
                 to="/profiles" // Use 'to' prop for navigation
-                className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4  rounded-xl font-semibold text-lg transition-all duration-300 w-full sm:w-[16.25rem]"
+                className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4 flex items-center justify-center rounded-xl font-semibold text-lg transition-all duration-300 w-full sm:w-[16.25rem]"
               >
                 <span>Browse Profiles</span>
                 
@@ -101,7 +101,7 @@ const MatrimonyHero = () => {
             <div className="relative">
               
               {/* Primary Image - Elegant Couple */}
-              <div className="relative lg:h-160 lg:w-fit z-10 bg-white p-6 rounded-3xl shadow-2xl transform transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <div className="relative lg:h-160 lg:w-fit z-10 bg-white p-6 rounded-3xl shadow-2xl transform transition-transform duration-500 ease-out hover:scale-[1.02] lg:ml-20">
                 <div className="aspect-[4/5] lg:h-150 rounded-2xl overflow-hidden bg-gradient-to-br from-amber-100 to-yellow-100 relative">
                   <img 
                     src="/images/heromain.jpg"
@@ -127,7 +127,7 @@ const MatrimonyHero = () => {
               </div>
 
               {/* Third Image - Traditional Wedding */}
-              <div className="absolute -top-6 -right-6 lg:right-30 z-20 bg-white p-3 rounded-xl shadow-lg transform -rotate-6 hover:-rotate-3 transition-transform duration-300 ease-out hover:scale-110">
+              <div className="absolute -top-6 -right-6 lg:right-15 z-20 bg-white p-3 rounded-xl shadow-lg transform -rotate-6 hover:-rotate-3 transition-transform duration-300 ease-out hover:scale-110">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <img 
                     src="/images/wedding.jpg"

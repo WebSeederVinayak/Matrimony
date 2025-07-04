@@ -77,17 +77,6 @@ export default function TestimonialSection() {
             </div>
           ))}
         </div>
-
-        {/* Call to Action at the bottom */}
-        <div className="text-center mt-16">
-          <p className="text-xl text-gray-700 mb-6">
-            Curious to see more inspiring journeys?
-          </p>
-          <button className="inline-flex items-center bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            Read More Success Stories
-            <ArrowRight className="ml-3 h-5 w-5" />
-          </button>
-        </div>
       </div>
     </section>
   );

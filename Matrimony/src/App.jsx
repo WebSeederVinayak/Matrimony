@@ -1,6 +1,6 @@
 // src/App.jsx
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; // No need for 'Link' here as it's not used directly in App.jsx's return
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header.jsx';
 import MatrimonyHero from './Components/MatrimonyHero.jsx';
@@ -12,8 +12,7 @@ import Info from './Components/Info.jsx';
 import Profiles from './Pages/Profiles.jsx';
 import AboutUsPage from './Pages/About.jsx';
 import ContactPage from './Pages/Contactpage.jsx';
-import Footer from './Components/Footer.jsx'; // Import your Footer component
-
+import Footer from './Components/Footer.jsx'; // Corrected import to MatrimonyFooter
 
 function App() {
   const [count, setCount] = useState(0);
@@ -39,7 +38,10 @@ function App() {
             <div id="personal-matchmaking-section">
               <PersonalMatchmakingSection />
             </div>
-            <TestimonialSection />
+            {/* Add id for TestimonialSection */}
+            <div id="testimonial-section"> {/* ADD THIS LINE */}
+              <TestimonialSection />
+            </div>
             <ContactForm />
           </>
         } />
@@ -48,7 +50,7 @@ function App() {
         <Route path="/contactus" element={<ContactPage />} />
       </Routes>
 
-      <Footer /> {/* Your MatrimonyFooter component */}
+      <Footer />
     </BrowserRouter>
   );
 }
